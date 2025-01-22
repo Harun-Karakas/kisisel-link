@@ -3,30 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İletişim</title>
+    <title>İletişim Sayfası</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
+        /* Genel Stil */
+        body, html {
             margin: 0;
             padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
         }
-        .button {
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            background-color: #007BFF;
+
+        /* Video arka plan */
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* İçerik Merkezi */
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
             color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            width: 200px;
+            text-shadow: 1px 1px 2px black;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        /* Butonlar */
+        .buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .button {
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+        }
+
+        .button img {
+            width: 30px;
+            height: 30px;
         }
     </style>
 </head>
 <body>
-    <h1>İletişim</h1>
-    <a class="button" href="karakas582harun@gmail.com">E-posta Gönder</a>
-    <a class="button" href="https://wa.me/905555555555">WhatsApp'tan Yaz</a>
-    <a class="button" href="https://instagram.com/harunkrks.l">Instagram</a>
+    <!-- Video Arka Plan -->
+    <video class="video-bg" autoplay muted loop>
+        <source src="video.mp4" type="video/mp4">
+        Tarayıcınız video formatını desteklemiyor.
+    </video>
+
+    <!-- İçerik -->
+    <div class="content">
+        <h1>Bizimle İletişime Geçin</h1>
+        <div class="buttons">
+            <!-- WhatsApp Butonu -->
+            <a class="button" href="https://wa.me/905555555555" target="_blank">
+                <img src="whatsapp-icon.png" alt="WhatsApp">
+            </a>
+            <!-- Instagram Butonu -->
+            <a class="button" href="https://instagram.com/seninprofilin" target="_blank">
+                <img src="instagram-icon.png" alt="Instagram">
+            </a>
+        </div>
+    </div>
 </body>
 </html>
